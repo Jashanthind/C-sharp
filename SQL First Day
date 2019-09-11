@@ -1,0 +1,11 @@
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A101', 'Smith', 'Mary', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A102', 'Jones', 'Cindy', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A103', 'Pike', 'Christopher', 'Group 3');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A104', 'Mccoy', 'Leonard', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A105', 'Scott', 'Montgommery', 'Group 5');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A106', 'Archer', 'Jonathan', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A107', 'Reacher', 'Jack', 'Group 2');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A108', 'Caidin', 'Martin', 'Group 2');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A109', 'Goldman', 'Oscar', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A110', 'Austin', 'Steve', 'Group 4');
+select * from students
