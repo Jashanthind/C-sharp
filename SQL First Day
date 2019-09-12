@@ -9,3 +9,23 @@ INSERT INTO students ( studentid, studentlastname, studentfirstname, programgrou
 INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A109', 'Goldman', 'Oscar', 'Group 1');
 INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A110', 'Austin', 'Steve', 'Group 4');
 select * from students
+
+
+
+CREATE TABLE students(
+studentid VARCHAR (20) NOT NULL,
+studentlastname VARCHAR (20),
+studentfirstname VARCHAR (20),
+programgroup VARCHAR (20)
+PRIMARY KEY (studentid)
+);
+
+
+
+CREATE TABLE pgmgroups(
+programgroupid VARCHAR (20) NOT NULL,
+programgroupname VARCHAR (20),
+classid VARCHAR (20),
+sectionid VARCHAR (20)
+PRIMARY KEY (programgroupid)
+);
