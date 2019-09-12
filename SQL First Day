@@ -58,6 +58,11 @@ INSERT INTO pgmgroups ( programgroupid, programgroupname, classid, sectionid ) V
 
 
 
+***COUNTING NUMBER OF ROWS IN A COLUMN***
+SELECT COUNT(column_name)
+FROM table_name
+
+
 
 ***COMPARING TABLES ON THE BASIS OF COUNT***
 DECLARE @Table1Count BIGINT,
