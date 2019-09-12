@@ -29,3 +29,12 @@ classid VARCHAR (20),
 sectionid VARCHAR (20)
 PRIMARY KEY (programgroupid)
 );
+
+
+
+
+How to rename a COLUMN
+USE CESVERSION2;
+GO
+EXEC sp_rename 'students.studentgroup' , 'programgroup';
+GO
