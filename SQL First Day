@@ -54,3 +54,23 @@ INSERT INTO pgmgroups ( programgroupid, programgroupname, classid, sectionid ) V
 INSERT INTO pgmgroups ( programgroupid, programgroupname, classid, sectionid ) VALUES ( '10', 'Group 2', 'CSD1114', '2');
 INSERT INTO pgmgroups ( programgroupid, programgroupname, classid, sectionid ) VALUES ( '11', 'Group 2', 'CSD1170', '4');
 INSERT INTO pgmgroups ( programgroupid, programgroupname, classid, sectionid ) VALUES ( '12', 'Group 2', 'CSD1022', '4');
+
+
+
+
+
+***COMPARING TABLES***
+DECLARE @Table1Count BIGINT,
+        @Table2Count BIGINT,
+		@Table3Count BIGINT,
+
+SELECT @Table1Count = COUNT(*) FROM Table1Count
+SELECT @Table1Count = COUNT(*) FROM Table1Count
+SET @Table3Count = @Table1Count - @Table2Count
+
+PRINT @Table3Count
+
+
+
+***EXAMPLE of table comparison***
+
