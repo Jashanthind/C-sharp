@@ -185,5 +185,13 @@ select *
 from veggies as v, lots as l
 where v.veggie_id = l.veggie_id
 
+**to multiply 2 columns**
+
+select lots.quantity_of_veggies * veggies.veggie_price, veggies.veggie_name 
+from lots, veggies
+where lots.lot_id = veggies.veggie_id
+
+
+
 
 
