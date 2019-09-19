@@ -191,6 +191,15 @@ select lots.quantity_of_veggies * veggies.veggie_price, veggies.veggie_name
 from lots, veggies
 where lots.lot_id = veggies.veggie_id
 
+**to get specific data common in table**
+
+select lots.quantity_of_veggies, veggies.veggie_name
+from lots, veggies
+where lots.veggie_id = veggies.veggie_id
+and veggies.veggie_type = 'root'
+
+
+
 
 
 
