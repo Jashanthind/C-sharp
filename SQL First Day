@@ -216,6 +216,11 @@ where lots.veggie_id = veggies.veggie_id
 
 select * from FARM;
 
+***sum of quantity*** 
+
+select sum(quantity_of_veggies )
+from lots, veggies
+where lots.lot_id = veggies.veggie_id
 
 
 
