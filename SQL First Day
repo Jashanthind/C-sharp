@@ -198,7 +198,12 @@ from lots, veggies
 where lots.veggie_id = veggies.veggie_id
 and veggies.veggie_type = 'root'
 
+**arrange data alphabetically**
 
+select veggies.veggie_name, lots.quantity_of_veggies * veggies.veggie_price as total
+from lots, veggies 
+where lots.veggie_id = veggies.veggie_id
+order by veggie_name
 
 
 
