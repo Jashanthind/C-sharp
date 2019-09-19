@@ -179,3 +179,8 @@ VALUES ( '12', '710' , 'Cyan','4');
 
 select * from lots
 
+select max(veggie_price) from veggies
+
+
+
+
