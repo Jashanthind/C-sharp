@@ -206,6 +206,17 @@ where lots.veggie_id = veggies.veggie_id
 order by veggie_name
 
 
+***create view in sql***
+
+create view Farm as
+   select veggies.veggie_name, lots.quantity_of_veggies, veggies.veggie_price
+from lots, veggies
+where lots.veggie_id = veggies.veggie_id
+
+
+select * from FARM;
+
+
 
 
 
