@@ -181,6 +181,9 @@ select * from lots
 
 select max(veggie_price) from veggies
 
+select *
+from veggies as v, lots as l
+where v.veggie_id = l.veggie_id
 
 
 
