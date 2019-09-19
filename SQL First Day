@@ -223,5 +223,9 @@ from lots, veggies
 where lots.lot_id = veggies.veggie_id
 
 
+***joining 2 tables***
+
+select * from lots
+right join veggies on lots.lot_id = veggies.veggie_id
 
 
