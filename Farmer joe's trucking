@@ -1,1 +1,72 @@
+create table warehouse(
+item_number varchar(20),
+item_description varchar(20),
+shelve_number varchar(20),
+quantity_in_stock int,
+primary key (item_number)
+);
 
+
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '1', 'Carrots' , '22','798');
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '2', 'Peas' , '25','148');
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '3', 'Tomatos' , '16','884');
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '4', 'Brocolli' , '5','579');
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '5', 'Corn' , '15','710');
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '6', 'Asparagus' , '13','562');
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '7', 'Green bean' , '19','643');
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '8', 'Squash' , '29','259');
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '9', 'Brussels sprouts' , '21','334');
+INSERT INTO  warehouse (item_number, item_description, shelve_number, quantity_in_stock )  
+VALUES ( '10', 'Artichokes' , '7','644');
+
+select * from warehouse;
+
+
+create table truck(
+truck_number varchar(20),
+driver_name varchar(20),
+order_number varchar(20),
+primary key (truck_number)
+);
+
+
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '1', 'John' , 'A15');
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '2', 'Michael' , 'A26');
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '3', 'Anthony' , 'B22');
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '4', 'Samuel' , 'C14');
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '5', 'Roman' , 'B25');
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '6', 'Peter' , 'A17');
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '7', 'Rocky' , 'C26');
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '8', 'Mark' , 'B24');
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '9', 'Jack' , 'D2');
+INSERT INTO  truck (truck_number, driver_name, order_number )  
+VALUES ( '10', 'Steve' , 'D25');
+
+
+
+select * from truck;
+
+
+
+
+select truck.order_number, truck.truck_number, warehouse.item_description  
+from warehouse, truck
+where warehouse.item_number = truck.truck_number;
