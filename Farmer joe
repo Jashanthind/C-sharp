@@ -125,3 +125,24 @@ where lots.lot_id = veggies.veggie_id
 
 select * from lots
 right join veggies on lots.lot_id = veggies.veggie_id
+
+
+
+
+
+insert into lots (lot_id, quantity_of_veggies, lot_name, veggie_id)
+values('100', '50', 'secret', '20');
+insert into lots (lot_id, quantity_of_veggies, lot_name, veggie_id)
+values('200', '75', 'secret2', '30');
+
+select * from lots; select * from veggies;
+
+select * 
+from lots as l, veggies as v
+where l.veggie_id = v.veggie_id
+order by l.veggie_id;
+
+
+***deleting a row***
+delete from veggies
+where veggie_name = 'Peas';
