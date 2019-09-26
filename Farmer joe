@@ -159,14 +159,6 @@ ON lots.veggie_id = veggies.veggie_id;
 
 
 
-
-
-
-
-
-
-
-
 select veggies.veggie_id, veggies.veggie_name, lots.lot_id, lots.lot_name, lots.veggie_id
 from lots
 
