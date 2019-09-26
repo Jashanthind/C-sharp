@@ -146,3 +146,12 @@ order by l.veggie_id;
 ***deleting a row***
 delete from veggies
 where veggie_name = 'Peas';
+
+
+***left join***
+
+select veggies.veggie_id, veggies.veggie_name, lots.lot_id, lots.lot_name
+from veggies
+
+LEFT JOIN lots
+ON lots.veggie_id = veggies.veggie_id;
