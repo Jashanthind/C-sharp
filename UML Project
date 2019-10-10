@@ -1,3 +1,5 @@
+***main***
+
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
@@ -28,7 +30,7 @@
 
 
 
-
+***Requirements***
 
  \section{Requirements}
  \begin{itemize}
