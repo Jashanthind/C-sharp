@@ -1,0 +1,47 @@
+select * from country
+select * from foods
+select * from sports
+
+
+select sum(sports.CaloriesBurned) * sum(country.Population) as CALBURNED
+from sports, country
+where country.FavoriteSport = sports.SportName
+
+
+
+
+select FavoriteFood, FavoriteSport
+from country 
+order by FavoriteSport
+
+
+
+create view moneyspent as
+select country.CountryName, sports.costtoplay
+from country, sports
+where FavoriteSport = SportName
+
+select * from moneyspent
+
+
+
+
+
+insert into country (CountryID, CountryName, Population, FavoriteFood, FavoriteSport) values('C07', 'Australia', '34242330', 'Burger', 'Cricket')
+
+
+
+
+select country.CountryName, foods.costoffood 
+from foods, sports, country
+where country.FavoriteFood = foods.FoodName and
+country.FavoriteSport = sports.SportName and
+sports.CaloriesBurned > 600
+
+
+
+
+
+
+
+
