@@ -1,7 +1,73 @@
 use AdventureWorks2012;
-
 select * from dbo.bramptondata
-
 --where solddate > '2019/9/1'
-
 order by solddate desc;
+
+
+
+
+
+select count(*) from dbo.bramptondata
+where solddate < '2019/9/1'
+order by solddate desc;
+
+
+
+
+
+select count(*) from dbo.bramptondata
+where solddate < '2019/9/1';
+
+
+
+
+-- what is average selling price of house??
+select b.type, address,
+avg([Sold price]) from dbo.bramptondata as b
+group by b.type
+
+
+
+
+
+-- what is average selling price of house??
+select b.type, address,
+avg([Sold price]) from dbo.bramptondata as b
+group by b.type
+ order by avg([Sold price]) desc;
+
+
+
+ -- what is average selling price of house??
+select avg([Sold price]), type, description
+ from dbo.bramptondata as b
+group by b.type, description
+ order by avg([Sold price]) desc;
+
+
+
+  -- what is average selling price of house??
+select avg([Sold price]), type, description, bedroom
+from dbo.bramptondata as b
+group by Type, description, bedroom
+order by avg([Sold price]) desc;
+
+
+
+  -- what is average selling price of house??
+select avg([Sold price]), 
+count(Type) as ctype, 
+count(description) as cdescription, 
+avg(bedroom) as AvgPriceBedrooms
+from dbo.bramptondata 
+group by Type, description, bedroom
+order by avg([Sold price]) desc;
+
+
+
+  -- what is average selling price of house??
+select month([solddate]) as SOLDMTH, 
+avg([Sold price]) as soldprice, type
+from dbo.bramptondata 
+group by month(solddate), Type, description, bedroom
+order by month(solddate), avg([Sold price]) desc;
