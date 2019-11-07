@@ -140,3 +140,70 @@ from bramptondata
 where month(SoldDate) between 9 and 10
 group by month(solddate), Community, type, description, Bedroom, SoldDate
 order by SoldDate asc, avg([sold price]) desc;
+
+
+
+
+select * 
+from tblTransaction as T
+inner join tblEmployee as E
+on E.EmployeeNumber = T.EmployeeNumber
+
+
+
+
+select * 
+from tblTransaction as T
+left join tblEmployee as E
+on E.EmployeeNumber = T.EmployeeNumber
+-- Where lastnames having a, a, t
+where EmployeeLastName like 'a%a%t%'
+
+
+
+select * 
+from tblTransaction as T
+left join tblEmployee as E
+on E.EmployeeNumber = T.EmployeeNumber
+-- Where lastnames starting with y
+where EmployeeLastName like 'y%'
+
+
+
+select * 
+from tblTransaction as T
+left join tblEmployee as E
+on E.EmployeeNumber = T.EmployeeNumber
+-- Where lastnames not starting with a
+where EmployeeLastName not like 'a%'
+
+
+
+select count(*), EmployeeLastName
+from tblTransaction as T
+left join tblEmployee as E
+on E.EmployeeNumber = T.EmployeeNumber
+--where lastname start with m and end with z
+where EmployeeLastName like 'm%z'
+group by EmployeeLastName
+
+
+
+select *
+from tblTransaction as T
+where EmployeeNumber in (126,127,128,129)
+and year(DateOfTransaction) = 2015
+order by EmployeeNumber
+
+
+
+
+
+
+
+
+
+
+
+
+
