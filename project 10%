@@ -118,3 +118,16 @@ group by Community, type, description, Bedroom
 order by avg([Sold Price]) desc;
 
 
+
+
+
+select community, type, description, bedroom, solddate,
+avg([sold price]) as AVGSoldPrice
+from bramptondata
+-- where solddate in september and october
+where month(solddate) between 9 and 10
+group by solddate, Community, type, description, Bedroom
+order by avg([sold price]) desc;
+
+
+
