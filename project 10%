@@ -88,6 +88,17 @@ order by avg([Sold Price]) desc;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 select community, type, description, bedroom, 
 avg([Sold Price]) as AVGSoldPrice
 from bramptondata
