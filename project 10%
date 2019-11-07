@@ -77,28 +77,6 @@ order by month(solddate), avg([Sold price]) desc;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 select community, type, description, avg([Sold Price])
 from bramptondata
 group by Community, type, description
@@ -199,11 +177,47 @@ order by EmployeeNumber
 
 
 
+select *
+from tblTransaction as T
+where EmployeeNumber in (select EmployeeNumber
+from tblEmployee 
+where EmployeeLastName not like 'y%')
+order by EmployeeNumber
 
 
 
+select *
+from tblTransaction as T
+where EmployeeNumber = some
+(select EmployeeNumber
+from tblEmployee where EmployeeLastName like 'y%')
+order by EmployeeNumber
 
 
+
+select *
+from tblTransaction as T
+where EmployeeNumber <> all
+(select EmployeeNumber
+from tblEmployee where EmployeeLastName like 'y%')
+order by EmployeeNumber
+
+
+
+select * 
+from tblTransaction as T
+inner join tblEmployee as E
+on E.EmployeeNumber = T.EmployeeNumber
+order by T.EmployeeNumber
+
+
+
+select * 
+from tblTransaction as T
+inner join (select * from tblEmployee 
+where EmployeeLastName like 'y%') as E
+on E.EmployeeNumber = T.EmployeeNumber
+order by T.EmployeeNumber
 
 
 
