@@ -71,3 +71,36 @@ avg([Sold price]) as soldprice, type
 from dbo.bramptondata 
 group by month(solddate), Type, description, bedroom
 order by month(solddate), avg([Sold price]) desc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select community, type, description, avg([Sold Price])
+from bramptondata
+group by Community, type, description
+order by avg([Sold Price]) desc;
+
