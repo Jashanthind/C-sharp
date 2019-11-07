@@ -131,3 +131,12 @@ order by avg([sold price]) desc;
 
 
 
+
+
+select community, type, description, bedroom, count(SoldDate) as countsold, SoldDate,
+avg([sold price]) as AVGSoldPrice
+from bramptondata
+-- where solddate in september and october
+where month(SoldDate) between 9 and 10
+group by month(solddate), Community, type, description, Bedroom, SoldDate
+order by SoldDate asc, avg([sold price]) desc;
