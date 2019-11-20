@@ -1,0 +1,24 @@
+select * from classrooms
+select * from students as s order by s.StudentName
+
+insert into students (StudentName, CourseNumber, SectionNumber) values ('Susan', 'Java101', 'H3');
+
+
+ALTER TABLE students
+	DROP CONSTRAINT coursesection
+
+
+ALTER TABLE students
+ADD CONSTRAINT UC_studentNameLimitation 
+UNIQUE(StudentName, CourseNumber, SectionNumber);
+
+select * from students order by StudentName, CourseNumber, SectionNumber
+
+select top 1 *
+from students as s
+where s.StudentName in ('Susan')
+and s.SectionNumber in ('H3');
+
+
+select * from sys.objects
+where type_desc like 'uni%';
