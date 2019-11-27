@@ -1,0 +1,22 @@
+select * from sys.objects
+where name like '%sales%'
+or name like '%shoes%';
+
+
+select * from customersales;
+select * from shoes;
+
+alter table shoes
+add constraint PK_SalesRecord Primary Key(color, style, brandname)
+
+alter table shoes
+alter column price float NOT NULL;
+
+alter table shoes
+alter column color nvarchar(255) NOT NULL;
+
+alter table shoes
+alter column style nvarchar(255) NOT NULL;
+
+alter table shoes
+alter column brandname nvarchar(255) NOT NULL;
