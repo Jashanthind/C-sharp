@@ -44,6 +44,57 @@ alter column color nvarchar(255) NOT NULL;
 alter table customersales
 alter column style nvarchar(255) NOT NULL;
 
+select customername, purchasedate, color, style, brandname
+from customersales
+group by customername, purchasedate, color, style, brandname;
+
+insert into shoes (price , color, style, brandname)
+values ('200', 'red', 'formal', 'Air Nike')
+
+insert into customersales (customername, purchasedate, color, style, brandname)
+values ('Jorge', '2019-11-29', 'red', 'formal', 'Air Nike')
+
+ALTER TABLE customersales
+	ADD CONSTRAINT FK_SalesConstraint Foreign KEY (color, style, brandname)
+		REFERENCES shoes (color, style, brandname)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE;
+
+delete from customersales where customername = 'Roy' and purchasedate = '7/6/2020' 
+and color = 'blue' and style = 'formal' and brandname = 'Nike.'; 
+
+select * from customersales
+where customername = 'Roy'; 
+
+
+
+select sum(s.price) as totalSalesprice 
+from shoes as s, customersales as c
+where
+s.color = c.color and
+s.style = c.style and
+s.brandname = c.brandname and
+month(c.purchasedate) between 2 and 4;
+
+
+select *
+from shoes as s, customersales as c
+where
+s.color = c.color and
+s.style = c.style and
+s.brandname = c.brandname and
+upper(s.color) = upper('Green');
+
+
+select * 
+from shoes as s, customersales as c
+where
+s.color = c.color and
+s.style = c.style and
+s.brandname = c.brandname and
+upper(c.customername) in ('John', 'Suzan');
+
+
 
 
 
