@@ -20,3 +20,18 @@ alter column style nvarchar(255) NOT NULL;
 
 alter table shoes
 alter column brandname nvarchar(255) NOT NULL;
+
+
+use NOV27InClassWork;
+alter table customersales
+add constraint PK_SalesRecord 
+Primary Key(color, style, brandname)
+
+alter table customersales
+alter column brandname nvarchar(255) NOT NULL;
+
+alter table customersales
+alter column color nvarchar(255) NOT NULL;
+
+alter table customersales
+alter column style nvarchar(255) NOT NULL;
