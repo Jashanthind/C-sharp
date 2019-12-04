@@ -1,0 +1,44 @@
+select * from lastyear;
+select * from currentYear;
+
+select address, avg(soldprice) from currentYear
+where remarksforclients like '%pool%'
+group by address, soldprice;
+
+declare @PriceWithOutPool as float;
+select  @PriceWithOutPool = avg(soldprice) from currentYear
+where remarksforclients not like '%pool%'
+print @PriceWithOutPool  
+
+
+declare @PriceWithPool as float;
+select  @PriceWithPool = avg(soldprice) from currentYear
+where remarksforclients like '%pool%'
+print @PriceWithPool 
+
+print @PriceWithPool - @PriceWithOutPool
+
+
+DECLARE @averageSellingPrice as INT;
+DECLARE @sumSellingPrice as INT;
+DECLARE @numberOfRecords as INT;
+declare @soldprice as INT;
+declare @community as varchar(40);
+declare @type as varchar(12);
+Set @numberOfRecords = 0;
+DECLARE @dataCursor as Cursor;
+
+SET @dataCursor = CURSOR for
+select type, community, soldprice
+from currentYear;
+
+open @dataCursor
+while @@Fetch_Status=0
+
+BEGIN
+PRINT @soldprice;
+fetch next from @dataCursor into @type, @Community, @soldprice
+
+END
+print @numberOfRecords
+
