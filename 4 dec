@@ -25,11 +25,12 @@ DECLARE @numberOfRecords as INT;
 declare @soldprice as INT;
 declare @community as varchar(40);
 declare @type as varchar(12);
+declare @address as varchar(40);
 Set @numberOfRecords = 0;
 DECLARE @dataCursor as Cursor;
 
 SET @dataCursor = CURSOR for
-select type, community, soldprice
+select type, community, soldprice, address
 from currentYear;
 
 open @dataCursor
@@ -37,8 +38,9 @@ while @@Fetch_Status=0
 
 BEGIN
 PRINT @soldprice;
-fetch next from @dataCursor into @type, @Community, @soldprice
+PRINT @type;
+PRINT @address;
+fetch next from @dataCursor into @type, @Community, @soldprice, @address
 
 END
 print @numberOfRecords
-
