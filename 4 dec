@@ -60,37 +60,35 @@ print @numberOfRecords
 
 
 
-DECLARE @averageSellingPrice as INT;
-DECLARE @sumSellingPrice as INT;
-DECLARE @numberOfRecords as INT;
-declare @soldprice as INT;
-declare @community as varchar(40);
-declare @type as varchar(12);
-declare @address as varchar(40);
-Set @numberOfRecords = 0;
-set @sumSellingPrice = 0;
-DECLARE @dataCursor as Cursor;
 
-SET @dataCursor = CURSOR for
+DECLARE @averageSellingPrice2 as INT;
+DECLARE @sumSellingPrice2 as INT;
+DECLARE @numberOfRecords2 as INT;
+declare @soldprice2 as INT;
+declare @community2 as varchar(40);
+declare @type2 as varchar(12);
+declare @address2 as varchar(40);
+Set @numberOfRecords2 = 0;
+set @sumSellingPrice2 = 0;
+DECLARE @dataCursor2 as Cursor;
+
+SET @dataCursor2 = CURSOR for
 	select type, community, soldprice, address
 	from currentYear;
 
-open @dataCursor
+open @dataCursor2
 while @@Fetch_Status=0
 
 BEGIN
-	SET @numberOfRecords = @numberOfRecords + 1;
-	if @type = 'Detached'
-	SET @sumSellingPrice = @sumSellingPrice + @soldprice;
-	--PRINT @soldprice;
-	--PRINT @type;
-	--PRINT @address;
-	fetch next from @dataCursor into @type, @Community, @soldprice, @address
+	SET @numberOfRecords2 = @numberOfRecords2 + 1;
+	if @type2 = 'Detached'
+	SET @sumSellingPrice2 = @sumSellingPrice2 + @soldprice2;
+	fetch next from @dataCursor2 into @type2, @Community2, @soldprice2, @address2
 
 END
-	print @sumSellingPrice
-	print @numberOfRecords
-	print @sumSellingPrice/@numberOfRecords
+	print @sumSellingPrice2
+	print @numberOfRecords2
+	print @sumSellingPrice2/@numberOfRecords2
 
 
 
@@ -100,37 +98,44 @@ END
 
 
 
-DECLARE @averageSellingPrice as INT;
-DECLARE @sumSellingPrice as INT;
-DECLARE @numberOfRecords as INT;
-declare @soldprice as INT;
-declare @community as varchar(40);
-declare @type as varchar(12);
-declare @address as varchar(40);
-Set @numberOfRecords = 0;
-set @sumSellingPrice = 0;
-DECLARE @dataCursor as Cursor;
+DECLARE @averageSellingPrice1 as INT;
+DECLARE @sumSellingPrice1 as INT;
+DECLARE @numberOfRecords1 as INT;
+declare @soldprice1 as INT;
+declare @community1 as varchar(40);
+declare @type1 as varchar(12);
+declare @address1 as varchar(40);
+Set @numberOfRecords1 = 0;
+set @sumSellingPrice1 = 0;
+DECLARE @dataCursor1 as Cursor;
 
-SET @dataCursor = CURSOR for
+SET @dataCursor1 = CURSOR for
 	select type, community, soldprice, address
 	from lastYear;
 
-open @dataCursor
+open @dataCursor1
 while @@Fetch_Status=0
 
 BEGIN
-	SET @numberOfRecords = @numberOfRecords + 1;
-	if @type = 'Detached'
-	SET @sumSellingPrice = @sumSellingPrice + @soldprice;
-	--PRINT @soldprice;
-	--PRINT @type;
-	--PRINT @address;
-	fetch next from @dataCursor into @type, @Community, @soldprice, @address
+	SET @numberOfRecords1 = @numberOfRecords1 + 1;
+	if @type1 = 'Detached'
+	SET @sumSellingPrice1 = @sumSellingPrice1 + @soldprice1;
+	fetch next from @dataCursor1 into @type1, @Community1, @soldprice1, @address1
 
 END
-	print @sumSellingPrice
-	print @numberOfRecords
-	print @sumSellingPrice/@numberOfRecords
+	print @sumSellingPrice1
+	print @numberOfRecords1
+	print @sumSellingPrice1/@numberOfRecords1
+
+
+print @numberOfRecords2 - @numberOfRecords1
+
+
+
+
+
+
+
 
 
 
