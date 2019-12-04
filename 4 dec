@@ -1,6 +1,8 @@
 select * from lastyear;
 select * from currentYear;
 
+
+
 select address, avg(soldprice) from currentYear
 where remarksforclients like '%pool%'
 group by address, soldprice;
@@ -17,6 +19,11 @@ where remarksforclients like '%pool%'
 print @PriceWithPool 
 
 print @PriceWithPool - @PriceWithOutPool
+
+
+
+
+
 
 
 DECLARE @averageSellingPrice as INT;
@@ -44,10 +51,6 @@ BEGIN
 
 END
 print @numberOfRecords
-
-
-
-
 
 
 
@@ -88,8 +91,47 @@ END
 	print @sumSellingPrice
 	print @numberOfRecords
 	print @sumSellingPrice/@numberOfRecords
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+DECLARE @averageSellingPrice as INT;
+DECLARE @sumSellingPrice as INT;
+DECLARE @numberOfRecords as INT;
+declare @soldprice as INT;
+declare @community as varchar(40);
+declare @type as varchar(12);
+declare @address as varchar(40);
+Set @numberOfRecords = 0;
+set @sumSellingPrice = 0;
+DECLARE @dataCursor as Cursor;
+
+SET @dataCursor = CURSOR for
+	select type, community, soldprice, address
+	from lastYear;
+
+open @dataCursor
+while @@Fetch_Status=0
+
+BEGIN
+	SET @numberOfRecords = @numberOfRecords + 1;
+	if @type = 'Detached'
+	SET @sumSellingPrice = @sumSellingPrice + @soldprice;
+	--PRINT @soldprice;
+	--PRINT @type;
+	--PRINT @address;
+	fetch next from @dataCursor into @type, @Community, @soldprice, @address
+
+END
+	print @sumSellingPrice
+	print @numberOfRecords
+	print @sumSellingPrice/@numberOfRecords
+
+
+
+
