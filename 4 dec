@@ -30,21 +30,20 @@ Set @numberOfRecords = 0;
 DECLARE @dataCursor as Cursor;
 
 SET @dataCursor = CURSOR for
-select type, community, soldprice, address
-from currentYear;
+	select type, community, soldprice, address
+	from currentYear;
 
 open @dataCursor
-while @@Fetch_Status=0
+	while @@Fetch_Status=0
 
 BEGIN
-PRINT @soldprice;
-PRINT @type;
-PRINT @address;
-fetch next from @dataCursor into @type, @Community, @soldprice, @address
+	PRINT @soldprice;
+	PRINT @type;
+	PRINT @address;
+	fetch next from @dataCursor into @type, @Community, @soldprice, @address
 
 END
 print @numberOfRecords
-
 
 
 
