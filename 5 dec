@@ -56,6 +56,22 @@ DECLARE my_cursor CURSOR FOR
 SELECT textline
 FROM textarea;
 open my_cursor;
+while (2>1)
+BEGIN
+	FETCH NEXT FROM my_cursor INTO @textline;
+	print @textline;
+END
+CLOSE my_cursor
+DEALLOCATE my_cursor
+
+
+
+
+DECLARE @textline VARCHAR(50);
+DECLARE my_cursor CURSOR FOR
+SELECT textline
+FROM textarea;
+open my_cursor;
 while @@fetch_status = 0
 BEGIN
 	FETCH NEXT FROM my_cursor INTO @textline;
@@ -63,3 +79,28 @@ BEGIN
 END
 CLOSE my_cursor
 DEALLOCATE my_cursor
+
+
+
+
+DECLARE @textline VARCHAR(255), @url VARCHAR(80), @notes VARCHAR(80), @counts INT, @time DATETIME;
+DECLARE @numberOfLines INT;
+set @numberOfLines = 0;
+DECLARE my_cursor CURSOR FOR
+SELECT textline
+FROM textarea;
+open my_cursor;
+while @@fetch_status = 0
+BEGIN
+	FETCH NEXT FROM my_cursor INTO @textline;
+	if((upper(@textline) like '%TESLA%') and (upper(@textline) like '%MUSK%'))
+	BEGIN
+	set @numberOfLines = @numberOfLines + 1;
+	print @textline;
+	END
+END
+print @numberOfLines;
+CLOSE my_cursor;
+DEALLOCATE my_cursor;
+
+
