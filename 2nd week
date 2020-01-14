@@ -24,7 +24,14 @@
             int c = 321;
             int d = 102;
             int sum = a + b + c + d;
-            Console.WriteLine("The sum of {0}, {1}, {2}, {3} is {4}",a,b,c,d,sum);
+            int diff = b - a;
+            int mult = c * d;
+            int div = b / d;
+            Console.WriteLine("The sum of {0}, {1}, {2}, {3} is {4}", a, b, c, d, sum);
+            Console.WriteLine("The sum of " + a + ", " + b + ", " + c + " and " + d + " is " + sum);
+            Console.WriteLine("The difference between " + b + " and " + a + " is " + diff);
+            Console.WriteLine(c + "*" + d + " = " + mult);
+            Console.WriteLine(b + "/" + d + " = " + div);
             Console.Read();
             
             
