@@ -1,0 +1,38 @@
+******square of a number******
+
+
+            int number = 345;
+            int squared = number * number;
+            Console.WriteLine("The square of {0} is {1}",number,squared);
+            Console.Read();
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+*****sum of 4 numbers*****
+
+
+            int a = 345;
+            int b = 432;
+            int c = 321;
+            int d = 102;
+            int sum = a + b + c + d;
+            Console.WriteLine("The sum of {0}, {1}, {2}, {3} is {4}",a,b,c,d,sum);
+            Console.Read();
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
