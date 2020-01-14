@@ -60,6 +60,14 @@
             Console.WriteLine("The difference between " + a + " and " + b + " is " + diff);
             Console.WriteLine("The Multiplication of {0}, {1}, {2}, {3} is {4}", a, b, c, d, mult);
             Console.WriteLine("The Division of four numbers is " + div);
+
+            int x = 15;
+            int y = 10;
+            int z = 20;
+            int w = 25;
+            int v = 5;
+            int operation = (x + y + z) * w / v;
+            Console.WriteLine("The result of formula (x+y+z)*w/v  is " + operation);
             Console.Read(); 
             
             
