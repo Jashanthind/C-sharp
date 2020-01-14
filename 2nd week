@@ -37,6 +37,41 @@
             
             
             
+      
+      
+      
+******assignment*****
+
+            String name = "Jashandeep Singh";
+            String age = "18";
+            String email = "C0758406@mylambton.ca";
+            int a = 8192;
+            int b = 16;
+            int c = 32;
+            int d = 8;
+            int sum = a + b + c + d;
+            int diff = a - b;
+            int mult = a * b * c * d;
+            int div = a / b / c / d;
+            Console.WriteLine("My Name is " + name);
+            Console.WriteLine("My Age is " + age);
+            Console.WriteLine("My email address is " + email);
+            Console.WriteLine("The sum of {0}, {1}, {2}, {3} is {4}", a, b, c, d, sum);
+            Console.WriteLine("The difference between " + a + " and " + b + " is " + diff);
+            Console.WriteLine("The Multiplication of {0}, {1}, {2}, {3} is {4}", a, b, c, d, mult);
+            Console.WriteLine("The Division of four numbers is " + div);
+            Console.Read(); 
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
