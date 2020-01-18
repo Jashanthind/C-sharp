@@ -21,5 +21,32 @@
             
             
             
+*********ques 2*******
+
+
+
+
+
+            int a = 17;
+            int b = 23;
+            int c = 16;
+            int d = 28;
+            int e = 25;
+            int f = 29;
+            int sum = a + b + c + d + e + f;
+            int avg = sum / 6;
+            Console.WriteLine("The Average of " + a + ", " + b + ", " + c + ", " + d + ", " + e + ", " + f + " is " + avg);
+            Console.Read();
             
+            
+            
+            
+            
+            
+            
+
+
+
+
+
             
