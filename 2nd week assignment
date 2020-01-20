@@ -77,7 +77,20 @@
             
             
             
-            
+**********ques4********
+
+
+
+
+
+            String T = "a";
+            String A = "b";
+            String B = "t";
+            Console.Writeline("Original Value = " + T + ", " + A + ", " + B);
+            T = "b";
+            A = "a";
+            Console.Writeline("Value after swaping first two numbers = " + T + ", " + A + ", " + B);
+            Console.Read();
             
 
 
