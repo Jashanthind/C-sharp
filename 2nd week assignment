@@ -44,7 +44,41 @@
             
             
             
+**********ques 3*********
 
+
+
+            int a = 1;
+            int b = 4;
+            int c = 6;
+            int sum1 = -a + b * c;
+            Console.WriteLine("A. -1 + 4*6 = " + sum1);
+            int x = 35;
+            int y = 5;
+            int z = 7;
+            int sum2 = (x + y) % 7;
+            Console.WriteLine("B. (35+5) % 7 = " + sum2);
+            int m = 14;
+            int n = 4;
+            int o = 11;
+            int sum3 = m + -n * c / o;
+            Console.WriteLine("C. 14 + -4 * 6/11 = " + sum3);
+            int i = 2;
+            int j = 15;
+            int sum4 = i + j / c * a - z % i;
+            Console.WriteLine("D. 2 + 15/6 * 1 - 7 % 2 = " + sum4);
+            Console.Read();
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
 
 
