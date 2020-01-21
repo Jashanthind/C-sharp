@@ -1,3 +1,8 @@
+******bill calculator*********
+
+
+
+
             const double lastMonthReading = 39803;
             const double charges = .095;
             double currentReading;
@@ -13,3 +18,28 @@
             double total = energyCharge + monthlyFees;
             Console.WriteLine("Total Bill: " + total.ToString("C"));
             Console.Read();
+
+
+
+
+
+
+
+
+******area of sphere***********
+
+
+
+
+
+
+            double radius;
+            Console.WriteLine("Enter the radius of sphere: ");
+            radius = Convert.ToInt32(Console.ReadLine());
+            double pi = 3.14;
+            double area = 4 * pi * radius * radius;
+            Console.WriteLine("The area of sphere with radius " + radius + " is " + area);
+            Console.Read();
+
+
+
