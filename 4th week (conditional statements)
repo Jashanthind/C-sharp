@@ -79,4 +79,24 @@
 
 
 
+*****boolean check*****
+
+
+
+
+
+                bool check = true;
+                if(check == false)
+                {
+                    Console.WriteLine("Key is pressed down.");
+                }
+                else
+                {
+                    Console.WriteLine("Key is not pressed down.");
+                }
+                Console.Read();
+
+
+
+
 
