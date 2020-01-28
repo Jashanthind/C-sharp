@@ -100,3 +100,35 @@
 
 
 
+
+
+
+******even odd*********
+
+
+
+
+
+
+
+                Console.WriteLine("Enter your number: ");
+                int number = Convert.ToInt32(Console.ReadLine());
+                if(number % 2 != 0)
+                {
+                    Console.WriteLine("The number you entered is odd.");
+                }
+                else
+                {
+                    Console.WriteLine("You have entered an even number.");
+                }
+                Console.Read();
+
+
+
+
+
+
+
+
+
+
