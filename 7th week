@@ -63,7 +63,22 @@
             
             
             
-            
+  ****xxxxx******
+  
+  
+  int x, y;
+            x = 0;
+            do
+            {
+                for(y=0; y<5; y++)
+                {
+                    Console.Write("X");
+                }
+                
+                Console.WriteLine("\n");
+                x++;
+            } while (x < 5);
+            Console.Read();
             
             
             
