@@ -95,21 +95,7 @@
             
             
             
-            int x, y;
-            x = 0;
-            do
-            {
-                y = 1;
-                {
-                    Console.WriteLine("X");
-                    y++;
-                }
-                while (y <= 5) ;
-                    Console.WriteLine("\n");
-                x++;
-            } while (x < 6);
-            
-            
+          
             
             
             
