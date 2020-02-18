@@ -1,6 +1,6 @@
             int i, j;
             i = Convert.ToInt32(Console.ReadLine()); 
-
+            Console.Write("Enter i: ");
             for(j=2; j<i ;j++)
             {
                 if(i%j==0)
