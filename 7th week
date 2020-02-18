@@ -1,0 +1,42 @@
+            int i, j;
+            i = Convert.ToInt32(Console.ReadLine()); 
+
+            for(j=2; j<i ;j++)
+            {
+                if(i%j==0)
+                {
+                    Console.WriteLine("{0} no", i);
+                    break;
+                }
+
+            }
+            if (j == i)
+            {
+                Console.WriteLine("{0} yes", i);
+            }
+            Console.Read();
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
