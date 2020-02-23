@@ -1,0 +1,35 @@
+*********Fibonacci Series*****
+
+
+
+            int a1 = 0;
+            int a2 = 1;
+            int a3;
+
+            Console.Write("Enter the number of elements you want to print: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.Write(a1 + ", " + a2 + ", ");
+
+            for(int i = 2; i < num; i++)
+            {
+                a3 = a1 + a2;
+                Console.Write(a3 + ", ");
+                a1 = a2;
+                a2 = a3;
+            }
+            Console.Read();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
