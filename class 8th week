@@ -108,6 +108,62 @@ namespace ConsoleApp1
 
 
 
+******power and cube********
+
+
+
+
+
+
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                calculation obj = new calculation();
+                obj.power();
+                obj.cube();
+                Console.ReadKey();
+            }
+        }
+        class calculation
+        {
+            public void power()
+            {
+                Console.Write("Enter Base: ");
+                int b = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter Exponent: ");
+                int e = Convert.ToInt32(Console.ReadLine());
+                int p = 1;
+
+                for (int i = 1; i <= e; i++)
+                {
+                    p = p * b;
+                }
+                Console.WriteLine("Power is: " + p);
+                
+            }
+            public void cube()
+            {
+                Console.Write("Enter the number you want to calculate cube of: ");
+                int c = Convert.ToInt32(Console.ReadLine());
+
+                int cube = c * c * c;
+                Console.WriteLine("Cube of {0} is {1}.",c,cube);
+
+            }
+        }
+
+
+        
+    }
+}
+
 
 
 
