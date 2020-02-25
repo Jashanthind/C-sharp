@@ -38,7 +38,65 @@ namespace ConsoleApp1
 
 
 
+****** +, -, *, /, % using classes *********
 
+
+
+
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                calculation obj = new calculation();
+                obj.input();
+                Console.ReadKey();
+            }
+        }
+        class calculation
+        {
+            public void input()
+            {
+                Console.Write("Enter the first number: ");
+                int a = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter the second number: ");
+                int b = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter the third number: ");
+                int c = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter the fourth number: ");
+                int d = Convert.ToInt32(Console.ReadLine());
+
+                output(ref a, ref b, ref c, ref d);
+
+                
+            }
+            public void output(ref int a, ref int b, ref int c, ref int d)
+            {
+                int add = a + b + c + d;
+                int sub = a - b - c - d;
+                int mul = a * b * c * d;
+                int div = b / a;
+                int mod = d % c;
+                Console.WriteLine("Sum of four numbers is {0}", add);
+                Console.WriteLine("Subtraction of four numbers is {0}", sub);
+                Console.WriteLine("Multiplication of four numbers is {0}", mul);
+                Console.WriteLine("Division of second number by first number is {0}", div);
+                Console.WriteLine("Remainder after dividing fourth number by third number is {0}", mod);
+            }
+        }
+
+
+        
+    }
+}
 
 
 
