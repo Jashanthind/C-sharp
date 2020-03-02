@@ -33,3 +33,49 @@ namespace ConsoleApp6
 
     }
 }
+
+
+
+
+
+*****star pattern 1********
+
+
+
+
+using System;
+
+namespace ConsoleApp7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                stars obj = new stars();
+                obj.result();
+                Console.ReadKey();
+            }
+        }
+        class stars
+        {
+            public void result()
+            {
+                int i, j;
+
+                for (i = 1; i <= 5; i++)
+                {
+                    for (j = 1; j <= i; j++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+
+            }
+
+        }
+
+    }
+}
+
