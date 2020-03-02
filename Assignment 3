@@ -1,0 +1,35 @@
+*****Alphabets*****
+
+
+
+
+
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                alphabets obj = new alphabets();
+                obj.result();
+                Console.ReadKey();
+            }
+        }
+        class alphabets
+        {
+            public void result()
+            {
+                Console.Write("Alphabets of English: ");
+                for (char letter = 'a'; letter <= 'z'; letter++)
+                {
+                    Console.Write(letter + "  ");
+                }
+            }
+
+        }
+
+    }
+}
