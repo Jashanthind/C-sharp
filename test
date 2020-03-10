@@ -1,1 +1,49 @@
 
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            odd obj = new odd();
+            obj.print();
+            obj.sum();
+            Console.ReadKey();
+         }
+     }
+        class odd
+        {
+            public void print()
+            {
+                Console.Write("The first 100 odd numbers are: ");
+                for (int x = 1; x <= 200; x++)
+                {
+                    if (x % 2 != 0)
+                    {
+                        Console.Write(x + " ");
+                    }
+                }
+                Console.WriteLine();
+            }
+            public void sum()
+            {
+                Console.Write("The sum of first 100 odd numbers is: ");
+                int sum = 0;
+                for (int y = 1; y <= 200; y++)
+                {
+                    if (y % 2 != 0)
+                    {
+                        sum = sum + y;
+                    }
+                }
+                Console.Write(sum);
+        }
+       
+    }
+}
+
+
+
+
