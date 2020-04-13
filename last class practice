@@ -80,4 +80,40 @@ int a, b, sum;
             
             
             
-   
+******smallest & lrgest word in string******
+
+
+
+
+Console.Write("Enter a sentence to get Smallest and Largest word: ");
+            string input = Console.ReadLine();
+
+            string[] words = input.Split(new[] { " " }, StringSplitOptions.None);
+            string word = "";
+            int chars = 0;
+            foreach (String c in words)
+            {
+                if (c.Length > chars)
+                {
+                    word = c;
+                    chars = c.Length;
+                }
+            }
+            Console.WriteLine("Largest word in the sentence is: " + word);
+
+            foreach (String c in words)
+            {
+                if (c.Length < chars)
+                {
+                    word = c;
+                    chars = c.Length;
+                }
+            }
+            Console.WriteLine("Smallest word in the sentence is: " + word);
+            Console.ReadKey();
+            
+            
+            
+            
+            
+            
