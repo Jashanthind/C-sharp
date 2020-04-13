@@ -58,6 +58,26 @@ double b = 8, h = 6, a = 4, w = 4, r = 3, an = 5;
             
             
             
+****Sum of digits****
+
+
+
+int a, b, sum;
+            sum = 0;
+
+            Console.Write("Enter a number: ");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            while(a > 0)
+            {
+                b = a % 10;
+                sum = sum + b;
+                a = a / 10;
+            }
+            Console.Write("Sum of all digits of number is: " + sum);
+            Console.ReadKey();
+            
+            
             
             
    
