@@ -1,0 +1,63 @@
+********Areas******
+
+
+double b = 8, h = 6, a = 4, w = 4, r = 3, an = 5;
+            Console.Write("Enter a number for area: ");
+            
+            int shapes = Convert.ToInt32(Console.ReadLine());
+            
+            switch (shapes)
+            {
+                case 1:
+                    double triangle = 0.5 * b * h;
+                    Console.WriteLine("Area of Triangle : " + triangle);
+                    break;
+
+                case 2:
+                    double square = a * a;
+                    Console.WriteLine("Area of Square : " + square);
+                    break;
+
+                case 3:
+                    double rectangle = w * h;
+                    Console.WriteLine("Area of Rectangle : " + rectangle);
+                    break;
+
+                case 4:
+                    double parallelogram = b * h;
+                    Console.WriteLine("Area of Parallelogram : " + parallelogram);
+                    break;
+
+                case 5:
+                    double trapezoid = 0.5 * (a + b) * h;
+                    Console.WriteLine("Area of Trapezoid : " + trapezoid);
+                    break;
+
+                case 6:
+                    double circle = (22 / 7) * r * r;
+                    Console.WriteLine("Area of Circle : " + circle);
+                    
+                    double circumference = 2 * (22 / 7) * r;
+                    Console.WriteLine("Circumference of Circle : " + circumference);
+                    break;
+
+                case 7:
+                    double ellipse = (22 / 7) * a * b;
+                    Console.WriteLine("Area of Ellipse : " + ellipse);
+                    break;
+
+                case 8:
+                    double sector = 0.5 * r * r * an;
+                    Console.WriteLine("Area of Sector : " + sector);
+                    break;
+            }
+            Console.ReadKey();
+            
+            
+            
+            
+            
+            
+            
+            
+   
